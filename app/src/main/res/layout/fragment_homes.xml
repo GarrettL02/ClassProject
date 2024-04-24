@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/homebackground"
     tools:context=".ui.homes.HomesFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -25,10 +27,68 @@
                 android:id="@+id/imgBtnAccount"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/baseline_account_circle_24" />
+                android:src="@drawable/baseline_account_circle_24"
+                app:tint="#333333" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Friends"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btnFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:backgroundTint="#333333"
+                android:layout_marginLeft="150dp"
+                android:text="See Activity" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="See what your friends are up to!!"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="380dp"
+            android:layout_height="300dp"
+            android:background="#d3d3d3"
+            android:layout_gravity="center">
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:paddingTop="20dp"
+            android:text="Need an Uber?"/>
+
+        <Button
+            android:id="@+id/btnUber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:backgroundTint="#333333"
+            android:text="See Avaliable" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>

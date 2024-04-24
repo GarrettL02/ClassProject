@@ -36,4 +36,8 @@ public class DataProvider {
 
     };//END Integer array
 
+    public static String[] UserName = {"Abby","Jamal","Terry","Henry","Emily","Bob"};//END string array
+
+    public static String[] Password = {};//END string array
+
 }
