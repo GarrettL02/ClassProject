@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_homes">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.classproject.ui.home.HomeFragment"
+        android:id="@+id/navigation_homes"
+        android:name="com.example.classproject.ui.homes.HomesFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_homes" />
 
     <fragment
         android:id="@+id/navigation_bars"
@@ -18,8 +18,8 @@
         tools:layout="@layout/fragment_bars" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.classproject.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_weather"
+        android:name="com.example.classproject.ui.weather.WeatherFragment"
+        android:label="Weather"
+        tools:layout="@layout/fragment_weather" />
 </navigation>
