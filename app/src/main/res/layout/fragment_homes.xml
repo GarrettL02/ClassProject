@@ -62,7 +62,7 @@
             android:layout_marginTop="-10dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="10dp"
-            android:text="See what your friends are up to!!"/>
+            android:text="See what your friends are up to!"/>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="380dp"
@@ -70,6 +70,20 @@
             android:background="#d3d3d3"
             android:layout_gravity="center">
 
+            <!--
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="360dp"
+                android:layout_height="100dp"
+                android:background="#F5F5F4"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="top">
+
+            </androidx.appcompat.widget.LinearLayoutCompat> -->
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>

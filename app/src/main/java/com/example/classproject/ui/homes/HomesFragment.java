@@ -1,6 +1,7 @@
 package com.example.classproject.ui.homes;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,7 @@ import android.widget.ImageView;
 
 import com.example.classproject.AccountActivity;
 import com.example.classproject.BarsActivity;
+import com.example.classproject.DataProvider;
 import com.example.classproject.R;
 
 /**
@@ -33,7 +35,11 @@ public class HomesFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    //declare variables
     ImageView imgBtnAccount;
+    Button btnUber;
+    Button btnFriends;
+    String[] userNamesList = DataProvider.UserName;
 
     public HomesFragment() {
         // Required empty public constructor
@@ -78,6 +84,7 @@ public class HomesFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         imgBtnAccount = view.findViewById(R.id.imgBtnAccount);
+        btnUber = view.findViewById(R.id.btnUber);
 
         imgBtnAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,7 +96,24 @@ public class HomesFragment extends Fragment {
                 v.getContext().startActivity(activityIntent);
 
             }
-        });//END On-click Listener
+        });//END On-click Listener imgBtnAccount
 
-    }
+
+        //when the uber button is clicked send to the uber website
+        btnUber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //create intent to send user to uber.com
+                Intent websiteIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.uber.com"));
+
+                //start the activity
+                startActivity(websiteIntent);
+
+
+            }
+        });//END On-click Listener btnUber
+
+    }//END main method
+
 }//END class

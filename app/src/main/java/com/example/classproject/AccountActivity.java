@@ -44,21 +44,41 @@ public class AccountActivity extends AppCompatActivity {
         tvConfirm = findViewById(R.id.tvConfirm);
         ivAccount = findViewById(R.id.ivAccount);
 
+
+
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //Make the widgets disappear
-                etUserName.setVisibility(View.GONE);
-                etPassword.setVisibility(View.GONE);
-                btnSignIn.setVisibility(View.GONE);
-                ivAccount.setVisibility(View.GONE);
+                //get the text from each edittext
+                String sUserName = etUserName.getText().toString();
+                String sPassword = etPassword.getText().toString();
 
-                //set the text view to have text
-                tvConfirm.setText("Logging in...");
+                //if the fields are empty prompt user to retype credentials
+                if (sUserName.matches("") || sPassword.matches("")){
 
-                //destroy the activity
-                finish();
+                    //set the text view to have text
+                    tvConfirm.setTextColor(getResources().getColor(R.color.purple_200));
+                    tvConfirm.setText("Please enter a valid username and password");
+                }
+                else{
+
+                    //Make the widgets disappear
+                    etUserName.setVisibility(View.GONE);
+                    etPassword.setVisibility(View.GONE);
+                    btnSignIn.setVisibility(View.GONE);
+                    ivAccount.setVisibility(View.GONE);
+
+                    //set the text view to have text
+                    tvConfirm.setText("Logging in...");
+
+                    //destroy the activity
+                    finish();
+
+                }//END if-else credential check
+
+
+
 
             }
         });//END onclick listener for signin
