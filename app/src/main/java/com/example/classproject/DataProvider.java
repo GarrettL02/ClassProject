@@ -2,9 +2,9 @@ package com.example.classproject;
 
 public class DataProvider {
 
-    public static String[] itemdescriptions = {"Bj's BrewHouse", "Henry's Restaurant", "Old Gas House", "Copper Spoon",
-            "Black Canyon", "Baker Street Steakhouse", "Lucky Turtle Grill", "Cheddar's Scratch Kitchen",
-            "The Hoppy Gnome", "Proximo"
+    public static String[] itemdescriptions = {"After Dark", "Club 44", "Mambo Room", "Wrigley Field Bar and Grill",
+            "Coyote Creek Bar and Grill", "Club Secreto", "Break & Run", "Knockin' Boots Saloon",
+            "The Ruin", "Charlie’s Place"
 
     };//END String array
 
@@ -20,19 +20,15 @@ public class DataProvider {
             "Latin fare, including breakfast, served in modern surrounds with big windows, a full bar & patio."
     };
 
-    public static String[] itemprice = {"$11.2", "$22.2", "$33.3", "$32.1", "$44.5",
-            "$67.8", "$21.2", "$32.33", "$64.3", "$9.22",
+    public static String[] itemHours = {"Fri:3pm-6am  Sat/Sun 6pm-6am", "Thurs/Fri/Sat 9pm-3am", "Thurs/Fri/Sat/Sun 6pm-3am", "Fri/Sat 11am-1am  Sun 12pm-12am",
+            "Fri/Sat 11am-11pm Sun 11am-8pm", "N/A", "Fri/Sat 11am-3am  Sun 11am-1am", "Fri/Sat 11am-2am  Sun 12pm-10pm", "Thurs/Fri/Sat/Sun 6pm-2am", "Fri: 4pm-2am  Sat: 11am-2am  Sun:11am-8pm",
     };//END String array
 
-    public static String[] url = {"https://www.bjsrestaurants.com/", "https://henrysftwayne.com/", "https://www.donhalls.com/the-gas-house", "https://www.copperspoonfw.com/",
-            "https://blackcanyonrestaurant.com/", "https://bakerstreetfortwayne.com/", "https://luckyturtlegrill.com/", "https://www.cheddars.com/locations/in/fort-wayne/fort-wayne/2029",
-            "https://www.hoppygnome.com/", "https://www.proximofw.com/"};
-
     public static Integer[] thumnbails = {
-            R.drawable.bjsbrewhouse, R.drawable.henrysrestaurant, R.drawable.oldgashouse
-            , R.drawable.copperspoon, R.drawable.blackcanyon, R.drawable.bakerstreetsteakhouse
-            , R.drawable.luckyturtlegrill, R.drawable.cheddars, R.drawable.thehoppygnome
-            , R.drawable.proximo
+            R.drawable.afterdark, R.drawable.club44, R.drawable.mamboroom
+            , R.drawable.wrigley, R.drawable.coyotecreek, R.drawable.clubsecreto
+            , R.drawable.breakandrun, R.drawable.knockinboots, R.drawable.theruin
+            , R.drawable.charliesplace
 
     };//END Integer array
 

@@ -2,6 +2,7 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_marginTop="4dp"
     android:background="#fffef3">
@@ -10,7 +11,8 @@
         android:id="@+id/rowImg"
         android:layout_width="100dp"
         android:layout_height="75dp"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/baseline_account_circle_24"
+        app:tint="#6f6f6f"/>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
@@ -22,19 +24,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Label"
-            android:textSize="25sp"
+            android:layout_marginTop="15dp"
+            android:textSize="30sp"
             android:paddingLeft="10dp"
             android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/rowPrice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Price"
-            android:textSize="15sp"
-            android:paddingTop="10dp"
-            android:paddingLeft="20dp"
-            android:textStyle="bold"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

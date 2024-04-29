@@ -13,10 +13,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 import com.example.classproject.AccountActivity;
 import com.example.classproject.BarsActivity;
 import com.example.classproject.DataProvider;
+import com.example.classproject.FriendsActivity;
+import com.example.classproject.MainActivity;
 import com.example.classproject.R;
 
 /**
@@ -39,6 +42,7 @@ public class HomesFragment extends Fragment {
     ImageView imgBtnAccount;
     Button btnUber;
     Button btnFriends;
+    ListView lvFriends;
     String[] userNamesList = DataProvider.UserName;
 
     public HomesFragment() {
@@ -85,6 +89,8 @@ public class HomesFragment extends Fragment {
 
         imgBtnAccount = view.findViewById(R.id.imgBtnAccount);
         btnUber = view.findViewById(R.id.btnUber);
+        lvFriends = view.findViewById(R.id.lvFriends);
+        btnFriends = view.findViewById(R.id.btnFriends);
 
         imgBtnAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,7 +105,7 @@ public class HomesFragment extends Fragment {
         });//END On-click Listener imgBtnAccount
 
 
-        //when the uber button is clicked send to the uber website
+        //when the friends button is clicked send to the friends page
         btnUber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,6 +119,19 @@ public class HomesFragment extends Fragment {
 
             }
         });//END On-click Listener btnUber
+
+        btnFriends.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //Create intent to open new activity
+                Intent activityIntent = new Intent(v.getContext(), FriendsActivity.class);
+
+                //start the activity
+                v.getContext().startActivity(activityIntent);
+
+            }
+        });//END on-click listener btnFriends
 
     }//END main method
 

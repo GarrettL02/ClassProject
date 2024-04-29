@@ -31,7 +31,7 @@ public class BarsFragment extends Fragment {
     //Declare Variables
     RecyclerView recyclerView;
     String[] items = DataProvider.itemdescriptions;
-    String[] price = DataProvider.itemprice;
+    String[] hours = DataProvider.itemHours;
     Integer[] thumbnails = DataProvider.thumnbails;
 
     // TODO: Rename and change types of parameters
@@ -88,7 +88,7 @@ public class BarsFragment extends Fragment {
 
         recyclerView.setHasFixedSize(true);
 
-        CustomAdapter myAdapter = new CustomAdapter(items, price, thumbnails);
+        CustomAdapter myAdapter = new CustomAdapter(items, hours, thumbnails);
 
         recyclerView.setAdapter(myAdapter);
 

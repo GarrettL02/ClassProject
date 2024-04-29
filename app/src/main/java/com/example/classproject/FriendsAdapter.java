@@ -10,18 +10,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder>{
+public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHolder>{
 
-    String[] items;
-    String[] hours;
-    Integer[] thumbnail;
+    String[] Names;
+
     static TextView topTextView;
 
-    public CustomAdapter(String[] items, String[] price, Integer[] thumbnail) {
+    public FriendsAdapter(String[] Names) {
 
-        this.items = items;
-        this.hours = price;
-        this.thumbnail = thumbnail;
+        this.Names = Names;
+
 
     }//END TestAdapter constructor
 
@@ -31,7 +29,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
 
         //Create this view for each row
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.my_custom_row, viewGroup,false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.friends_custom_row, viewGroup,false);
 
         return new ViewHolder(view);
     }//END ViewHolder method
@@ -40,49 +38,27 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
 
         //GetTextView is method in this class
-        viewHolder.getRowText().setText(items[position]);
+        viewHolder.getRowName().setText(Names[position]);
 
-        //GetTextView is method in this class
-        viewHolder.getRowPrice().setText(hours[position]);
-
-        //GetTextView is method in this class
-        viewHolder.getRowImage().setImageResource(thumbnail[position]);
 
     }//END onBindViewHolder method
 
     public int getItemCount() {
 
-        return items.length;
+        return Names.length;
 
     }//END getItemCount
-
-    public int getPriceCount(){
-
-        return hours.length;
-
-    }//END getPriceCount
-
-    public int getThumbnailCount(){
-
-        return thumbnail.length;
-
-    }//END getThumbnailCount
-
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        private final TextView rowText;
-        private final TextView rowPrice;
-        private final ImageView rowImage;
+        private final TextView rowName;
 
         public ViewHolder(@NonNull View itemView) {
 
             super(itemView);
 
-            rowText = itemView.findViewById(R.id.rowLabel);
-            rowPrice = itemView.findViewById(R.id.rowPrice);
-            rowImage = itemView.findViewById(R.id.rowImg);
+            rowName = itemView.findViewById(R.id.rowLabel);
 
 
             //Create new OnClickListener for each value in the list
@@ -93,7 +69,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
                     /* ---------- This is where to start the second activity ------------*/
 
                     //Create intent to open new activity
-                    Intent activityIntent = new Intent(v.getContext(), BarsActivity.class);
+                    Intent activityIntent = new Intent(v.getContext(), MessageActivity.class);
 
                     //add key value pair data to activity -  data is index that is clicked
                     activityIntent.putExtra("index", getAdapterPosition());
@@ -107,19 +83,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         }//END viewHolder Constructor
 
 
-        public TextView getRowText() {
-            return rowText;
+        public TextView getRowName() {
+            return rowName;
         }
 
-        public TextView getRowPrice() {
-            return rowPrice;
-        }
+    }//END Viewholder
 
-        public ImageView getRowImage() {
-            return rowImage;
-        }
-
-    }//END Class ViewHolder
-
-
-}
+}//END CLASS
